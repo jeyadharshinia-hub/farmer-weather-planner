@@ -25,11 +25,22 @@ st.markdown("""
         margin-bottom: 30px;
     }
     .card {
-        background-color: white;
-        padding: 25px;
-        border-radius: 15px;
-        box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-        margin-bottom: 25px;
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 18px;
+        border-radius: 12px;
+        box-shadow: 0px 2px 6px rgba(0,0,0,0.08);
+        margin-bottom: 18px;
+        border: 1px solid #dfe6e9;
+    }
+    hr {
+        border: none;
+        border-top: 1px solid #dcdcdc;
+        margin: 15px 0;
+    }
+    @media (max-width: 600px) {
+        .main-title { font-size: 26px !important; }
+        .sub-text { font-size: 14px !important; }
+        .stButton>button { width: 100%; font-size: 15px; }
     }
     </style>
 """, unsafe_allow_html=True)
@@ -134,3 +145,4 @@ if st.button("🔍 Get Weather & Crop Suggestion"):
             st.markdown("</div>", unsafe_allow_html=True)
         else:
             st.error("❌ Unable to fetch weather. Please try again later.")
+
